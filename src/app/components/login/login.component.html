@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="title">Авторизация</h1>
+  <p class="subtitle">Пожалуйста, введите ваш логин(email) и пароль</p>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()" class="form">
+    <div class="input-container">
+      <label>Email</label>
+      <input formControlName="email" type="email">
+      <p *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="alarm">Логин обязателен!</p>
+    </div>
+    <div class="input-container">
+      <label>Пароль</label>
+      <input formControlName="password" type="password">
+      <p *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="alarm">
+        Пароль обязателен!<br>
+        (Пароль должен иметь длину не менее 8 символов, среди которых как минимум 1 буква в верхнем регистре, 1 буква в нижнем регистре и 1 цифра)
+      </p>
+    </div>
+    <button [disabled]="loginForm.invalid" type="submit">Войти</button>
+  </form>
+</div>

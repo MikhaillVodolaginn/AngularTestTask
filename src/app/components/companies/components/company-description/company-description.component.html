@@ -1,0 +1,30 @@
+<ng-container *ngIf="company | async as company">
+  <div class="company__title">
+    <h1 class="company__text">{{company.business_name}}</h1>
+    <img src="{{company.logo}}" width="600" height="160" alt="{{company.id}}">
+  </div>
+  <div class="company__info">
+    <div class="company__info__item">
+      <p class="company__text">Вид деятельности:</p>
+      <p class="company__text">{{company.industry}}</p>
+    </div>
+    <div class="company__info__item">
+      <p class="company__text">Слоган:</p>
+      <p class="company__text">{{company.catch_phrase}}</p>
+    </div>
+    <div class="company__info__item">
+      <p class="company__text">Номер телефона:</p>
+      <p class="company__text">{{company.phone_number}}</p>
+    </div>
+    <div class="company__info__item">
+      <p class="company__text">Адрес:</p>
+      <p class="company__text">{{company.full_address}}</p>
+    </div>
+  </div>
+  <div class="company__under">
+    <button routerLink="../" type="button" class="company__back">К списку компаний</button>
+    <a href="https://maps.yandex.ru/?ll={{company.longitude}},{{company.latitude}}&z=7&pt={{company.longitude}},{{company.latitude}}},comma" target="_blank">
+      <img class="company__map" src="https://static-maps.yandex.ru/1.x/?ll={{company.longitude}},{{company.latitude}}&size=600,300&z=7&l=map&pt={{company.longitude}},{{company.latitude}},comma" alt="Интерактивная Карта">
+    </a>
+  </div>
+</ng-container>

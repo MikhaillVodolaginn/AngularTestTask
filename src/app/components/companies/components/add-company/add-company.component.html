@@ -1,0 +1,27 @@
+<div class="container">
+  <h1 class="title">Добавление компании</h1>
+  <form [formGroup]="companyForm" (ngSubmit)="submit()" class="form">
+    <div class="input-container">
+      <label>Название компании</label>
+      <input formControlName="name" type="text">
+      <p *ngIf="companyForm.get('name')?.touched && companyForm.get('name')?.invalid" class="alarm">
+        Введите имя компании!<br>
+        Название не должно быть длиннее 15 символов!
+      </p>
+    </div>
+    <div class="select-container">
+      <label>Вид деятельности</label>
+      <select formControlName="industry" class="industry">
+        <option disabled value="null">Выберите вид деятельности</option>
+        <option class="form__option" *ngFor="let industry of industries">{{industry}}</option>
+      </select>
+      <p *ngIf="companyForm.get('industry')?.touched && companyForm.get('industry')?.invalid" class="alarm">Выберите вид деятельности!</p>
+    </div>
+    <div class="checkbox-container">
+      <label>Присутствие на Российском рынке</label>
+      <input formControlName="inRussia" type="checkbox" class="checkbox">
+    </div>
+    <button [disabled]="companyForm.invalid" type="submit">Добавить</button>
+  </form>
+</div>
+

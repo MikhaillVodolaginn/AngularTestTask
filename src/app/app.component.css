@@ -1,0 +1,35 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  color: royalblue;
+  cursor: default;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.footer {
+  font-size: 12px;
+  text-align: center;
+  cursor: default;
+}

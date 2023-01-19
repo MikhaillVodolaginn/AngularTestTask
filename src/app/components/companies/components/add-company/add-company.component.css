@@ -1,0 +1,107 @@
+* {
+  color: royalblue;
+}
+
+button {
+  cursor: pointer;
+  margin: 20px auto 0;
+  font-weight: 500;
+  font-size: 40px;
+  border-radius: 20px;
+  background: cornsilk;
+  padding: 8px 50px;
+}
+
+button:hover {
+  background: royalblue;
+  color: wheat;
+}
+
+label {
+  margin: 10px auto;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+input {
+  margin: 0 auto;
+  padding: 8px;
+  min-width: 224px;
+  background-color: cornsilk;
+  border-radius: 10px;
+  color: royalblue;
+  font-size: 16px;
+}
+
+.container {
+  margin: 60px auto;
+  max-width: 800px;
+  background: wheat;
+  border: 4px royalblue solid;
+  border-radius: 30px;
+  padding: 40px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checkbox-container {
+  display: flex;
+}
+
+.alarm {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+select {
+  background-color: cornsilk;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+option {
+  font-weight: 500;
+  font-size: 20px;
+  margin: auto 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  height: 19px;
+  min-width: 19px;
+  padding: 0;
+  margin: auto;
+  vertical-align: middle;
+  cursor: pointer;
+}

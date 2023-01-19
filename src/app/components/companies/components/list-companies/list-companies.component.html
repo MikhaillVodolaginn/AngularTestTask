@@ -1,0 +1,25 @@
+<ng-container>
+  <div class="columns">
+    <p class="column__logo">Логотип</p>
+    <button (click)="sortNames()" class="column__sort">Название</button>
+    <button (click)="sortIndustries()" class="column__sort">Вид деятельности</button>
+    <button (click)="sortTypes()" class="column__sort">Тип</button>
+    <button routerLink="../add" type="button" class="add">Добавить</button>
+  </div>
+  <div
+    infinite-scroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="updateCompanies()"
+  >
+    <div *ngFor="let company of companies" class="companies">
+      <div class="company__container">
+        <img src="{{company.logo}}" width="200" height="50" alt="{{company.id}}">
+        <p class="company__text">{{company.business_name}}</p>
+        <p class="company__text">{{company.industry}}</p>
+        <p class="company__text">{{company.type}}</p>
+        <button [routerLink]="['../description', company.id]" type="button">Подробнее</button>
+      </div>
+    </div>
+  </div>
+</ng-container>

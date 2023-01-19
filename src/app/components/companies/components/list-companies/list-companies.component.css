@@ -1,0 +1,81 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  cursor: default;
+}
+
+.columns {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.column__logo  {
+  width: 200px;
+  margin: auto;
+}
+
+.column__sort {
+  width: 261px;
+  margin: auto;
+  background-color: white;
+  height: 64px;
+  border: 2px royalblue solid;
+}
+
+.column__sort:hover {
+  color: darkblue;
+  background-color: white;
+  border-color: darkblue;
+}
+
+.column__sort:visited {
+  color: darkblue;
+  background-color: wheat;
+  border-color: darkblue;
+}
+
+.companies {
+  margin: 10px;
+}
+
+.company__container {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  background-color: cornsilk;
+  border: solid royalblue 3px;
+  border-radius: 20px;
+}
+
+.company__text {
+  flex: 20%;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: wheat;
+  color: royalblue;
+  padding: 8px 50px;
+}
+
+button:hover {
+  background: royalblue;
+  color: wheat;
+}
+
+.add {
+  width: 221px;
+}
+
+.more {
+  margin-left: auto;
+}
